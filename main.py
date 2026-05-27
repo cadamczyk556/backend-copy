@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(BASE_DIR, "database", "portfolio.sqlite")
+DB_PATH = os.path.join(BASE_DIR, "portfolio.sqlite")
 
 def get_db():
     conn = sqlite3.connect(DB_PATH)
