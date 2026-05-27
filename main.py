@@ -8,14 +8,14 @@ import os
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(BASE_DIR, "database", "hammer-2-processed.sqlite")
+DB_PATH = os.path.join(BASE_DIR, "database", "portfolio.sqlite")
 
 def get_db():
     conn = sqlite3.connect(DB_PATH)
